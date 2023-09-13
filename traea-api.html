@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generador de chistes</title>
+    <link rel="stylesheet" href="tarea-api.css">
+    
+</head>
+<body>
+<section>
+    <div class="container">
+        <div class="joke">
+            <p></p> 
+        </div>
+        <button>Otro!</button>        
+    </div>
+    
+    <div class="container2">
+        <form class="comentarios">
+           <textarea type="text" id="comment" rows="5" col="25"> </textarea>
+           <br>
+           <label for="gusto"></label>
+           <input id="gusto" type="radio" name="gusto" value="y" required> Me gusta!
+           <br>
+           <input id="gusto" type="radio" name="gusto" value="n" required> No me gusta 
+           <br>
+           <input type="submit" value="Postear Comentario"></button>   
+        </form>
+        
+    </div> 
+    <div class="container3">
+        <ul id="myList">
+            
+        </ul>
+    </div> 
+    
+</section> 
+<script src="./tarea-api.js"></script>
+</body>
+</html>
+
