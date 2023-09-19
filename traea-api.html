@@ -2,36 +2,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de chistes</title>
     <link rel="stylesheet" href="tarea-api.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 </head>
 <body>
+    <h1>JOKE TELLER!</h1>
 <section>
-    <div class="container">
+    <div id="container">
         <div class="joke">
             <p></p> 
         </div>
         <button>Otro!</button>        
     </div>
     
-    <div class="container2">
-        <form class="comentarios">
-           <textarea type="text" id="comment" rows="5" col="25"> </textarea>
-           <br>
-           <label for="gusto"></label>
-           <input id="gusto" type="radio" name="gusto" value="y" required> Me gusta!
-           <br>
-           <input id="gusto" type="radio" name="gusto" value="n" required> No me gusta 
-           <br>
-           <input type="submit" value="Postear Comentario"></button>   
+    <div id="container2">
+        <form>
+           <label for="comment">Comentario:</label>
+            <textarea type="text" id="comment" rows="5" col="25"> </textarea>
+           <label for="score"> Puntuación:</label>
+           <select id="score" required>
+            <option value="0" selected disabled ></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select> 
+           <input type="submit" value="Postear Comentario" id="submit_comment"></button>   
         </form>
         
     </div> 
-    <div class="container3">
-        <ul id="myList">
-            
-        </ul>
+    <div id="container3">
     </div> 
     
 </section> 

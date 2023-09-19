@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap'); 
 
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 
 }
@@ -11,46 +9,100 @@ html{
     font-family: 'Rubik', sans-serif;
     font-size: 30px;
     color: white;
+    text-align: center;
 }
 
 body{
-    background-color: rgb(38, 38, 93);
+    background-image: url(https://i.pinimg.com/originals/4d/36/91/4d3691de3ba52b0c89e7cd23a7597b7a.png);
+    background-size: cover;
+}
+
+
+h1 {
+    color: white;
+    font-weight:bolder ;
+    padding: 15px;
+    max-width: 750px;
+    border-radius: 25%;
+    border-color:rgb(248,197,212);
+    border-style: solid;
+    display:inline-block;
+    align-self: center;
+    background-color:rgb(248, 197, 212);
+  
 }
 
 div{
-    min-height: 100;
-    width: 100%;
-    margin: 0 auto;
-    padding: 100px 0;
+    margin:auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 700px;
 }
+
+
 
 button{
     width: 75px;
     height: 40px;
     font-size: 15px;
+    padding: 2%;
+    align-self: center;
 
 }
-.container{
+#container, .joke{
     width: 90%;
-    max-width: 500px;
-
+    padding-right: 2%;
+    padding-left: 2%;
+    background-color:rgb(172,219,180) ;
 }
 
-.container2{
-    background-color: rgb(38, 38, 93);
+#container2{
+    background-color: rgb(196,172,220);
     width: 90%;
-    max-width: 500px;
-    padding:10%;
-    text-align: center;
+    padding: 2%;
+    padding-top: 0;
+    padding-bottom: 0;
+    align-content: center;
+    display: grid;
+    
 }
 textarea {
     resize: none;
 }
 
 form {
-    font-size: small;
-    padding-inline: 15%;
+    font-size: 20px;
+    text-align: center;
+    width: 200px;
+    align-items: center;
+    line-height: 300%;
 }
+
+
+
+.checked {
+    color: rgb(4, 199, 17);
+}
+
+  #container3 {
+    background-color:rgb(248,197,212);
+    font-size: 20px;
+    line-height: 20%;
+    display: grid;
+    padding: 8px;
+    
+  }
+
+  #comentario {
+    width: 600px;
+    max-width: 750px;
+    display: block;
+    max-width: auto;
+    border-style:double;
+  }
+  
+
+  #submit_comment {
+    padding: 2%;
+  }

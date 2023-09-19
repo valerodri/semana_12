@@ -1,6 +1,6 @@
 
-const button = document.querySelector('.container button');
-const texto_chiste = document.querySelector('.container p');
+const button = document.querySelector('#container button');
+const texto_chiste = document.querySelector('#container p');
 const lista_comentarios = [];
 
 
@@ -25,11 +25,11 @@ document.addEventListener('submit', function postear_comentario(){
   let htmlContentToAppend = "";
   let _datos = {
       comment: "xxx",
-      gusto: "yyy"
+      score: "yyy"
     }
 
   _datos.comment = document.getElementById("comment").value;
-  _datos.gusto = document.getElementById("gusto").value;
+  _datos.score = parseInt(document.getElementById("score").value);
   
   fetch('https://jsonplaceholder.typicode.com/users', {
   method: "POST",
@@ -39,16 +39,33 @@ document.addEventListener('submit', function postear_comentario(){
 .then(response => response.json()) 
 .then(json => console.log(json));
 
-
-const node = document.createElement("li");
-const textnode = document.createTextNode(_datos.comment);
-node.appendChild(textnode);
-document.getElementById("myList").appendChild(node);
-
-}
-);
+if (_datos.comment != "" && _datos.score!=0) {
+htmlContentToAppend += `
+<div id="comentario">
+<p>${showProductRating(_datos.score)}</p>
+<p>${_datos.comment}</p>
+</div>
 
 
+    `;
+    document.getElementById("container3").innerHTML = htmlContentToAppend;
+
+
+} else { alert('Debe rellenar todos los campos.')};
+
+});
+    
+        
+
+
+function showProductRating(score){
+  let htmlContentToAppend = ""
+  for (let i=0; i<score; i++) 
+      htmlContentToAppend += `<span class="fa fa-star checked"></span>`
+  for (let i=0; i<5-score; i++) 
+      htmlContentToAppend += `<span class="fa fa-star"></span>`
+  return htmlContentToAppend;
+} 
 
 /*
 
@@ -70,4 +87,17 @@ fetch('url')
 	.catch(error => {
 	console.error(error);
 });
+
+---
+  //if (input_description != "" && comment_score!=0) 
+      document.getElementById("container3").innerHTML += `
+      <div>
+      <div id="comentarios" >
+      <p> ${showProductRating(comment_score)}</p>
+      <p>${input_description}</p>
+
+      </div>
+      </div>
+
+          `;
 */
